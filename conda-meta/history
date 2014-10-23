@@ -1,0 +1,11 @@
+==> 2014-10-22 18:00:13 <==
+# cmd: /Users/michaelcai/anaconda/bin/conda create -p /Users/michaelcai/anaconda/envs/udemy_mvpland python=2.7 django=1.6
+==> 2014-10-22 18:00:16 <==
+# cmd: /Users/michaelcai/anaconda/bin/conda create -p /Users/michaelcai/anaconda/envs/udemy_mvpland python=2.7 django=1.6
++django-1.6.6-py27_0
++openssl-1.0.1h-1
++python-2.7.8-1
++readline-6.2-2
++sqlite-3.8.4.1-0
++tk-8.5.15-0
++zlib-1.2.7-1
