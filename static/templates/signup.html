@@ -26,12 +26,23 @@
        </div>
 
         <div class="col-sm-4">
-          <h1>Join Now</h1>
-            <form method ='POST' action=''> {% csrf_token %}
-                  {{ form.as_p }}
-
-                  <input type='submit' class='btn btn-success btn-block'>
-            </form>
+          <h2>Pre-Order</h2>
+          <p>Join this course now! Click here to pre-order</p>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <table>
+            <input type="hidden" name="on0" value="Course">
+            <select class="form-control" name="os0">
+              <option value="Basic">Basic $99.00 USD</option>
+              <option value="Basic +">Basic + $149.00 USD</option>
+              <option value="Premium">Premium $199.00 USD</option>
+            </select> </td></tr>
+            </table>
+            <input type="hidden" name="currency_code" value="USD">
+            <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIIAQYJKoZIhvcNAQcEoIIH8jCCB+4CAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYCIDG1u/+lcdUznLjWmEnhI+VbKDvRULhhQIHZ3WneeIrvVpCHjTtmc4YH/YpX4FLxo+VB70V3wvLN4h1SAu+g+bhIahf/B48K6RfJNtJktoxdGRi+w0vF+u2qGNhAhukYp/QMC7vIleaG9pQJyKclHSZUAoPj1it4KUa4sVnTfRjELMAkGBSsOAwIaBQAwggF9BgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECOtcOITt+0J0gIIBWP5xlCoIBVaJF418uWdZ8Ovwj9zKfIyQKsqlB1X4TYN7z5jC/kCX2AheN0ZPVBTNCbeRuBf5HJjH2rd9b7cKx39nIsRQKkzdl82qPM8ddA4LyfClWRSQavu7PST6DWTxXub2QIzwZ+a8I3kEO9njHgZjRgZaavTfUGz3uyVt6HuXOXEuaqOuhIi/kXeiK2ErFgURLfYJPD3D5CtvorcGpapr9Hq+rj1srqzsqWqq9Z4v9T0YsnsqZlLEDRKgCdQ7Dvrce0iwOb7y65hlllGpYc8Et9lNDBAdp8VazlMGXQVTOqjZ9jai3OmuRnLKwDOGw8Z0z5fYV8rFg4HdpSIMFHu1j04ZOAi3DgpJQKEbftZxnSuyL4dnUXwlsIMgYguNAIq7juOTXp5BhIyW0qWMQqll05XptQ59bWH9Q342mrHYqyBGgposz07HpFxWoh1/cNZjsqyMVxjGoIIDhzCCA4MwggLsoAMCAQICAQAwDQYJKoZIhvcNAQEFBQAwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tMB4XDTA0MDIxMzEwMTMxNVoXDTM1MDIxMzEwMTMxNVowgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDBR07d/ETMS1ycjtkpkvjXZe9k+6CieLuLsPumsJ7QC1odNz3sJiCbs2wC0nLE0uLGaEtXynIgRqIddYCHx88pb5HTXv4SZeuv0Rqq4+axW9PLAAATU8w04qqjaSXgbGLP3NmohqM6bV9kZZwZLR/klDaQGo1u9uDb9lr4Yn+rBQIDAQABo4HuMIHrMB0GA1UdDgQWBBSWn3y7xm8XvVk/UtcKG+wQ1mSUazCBuwYDVR0jBIGzMIGwgBSWn3y7xm8XvVk/UtcKG+wQ1mSUa6GBlKSBkTCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb22CAQAwDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQUFAAOBgQCBXzpWmoBa5e9fo6ujionW1hUhPkOBakTr3YCDjbYfvJEiv/2P+IobhOGJr85+XHhN0v4gUkEDI8r2/rNk1m0GA8HKddvTjyGw/XqXa+LSTlDYkqI8OwR8GEYj4efEtcRpRYBxV8KxAW93YDWzFGvruKnnLbDAF6VR5w/cCMn5hzGCAZowggGWAgEBMIGUMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbQIBADAJBgUrDgMCGgUAoF0wGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG9w0BCQUxDxcNMTQxMDI4MTQyNTQ3WjAjBgkqhkiG9w0BCQQxFgQUdZC6pbpoFa166enTNOc7prq0Tw0wDQYJKoZIhvcNAQEBBQAEgYAqndNSiPNZQ/qKVTBXeso139Lus8RPmkeXcFdeQfcecRb6CwB/SDwlWHnru6Ro067AYMlftVIumw2fUpGgPPcQhhAjuDtwBJiXWOR1RdZjKJrfeS4ONelUizJHeG53RuhntOsuBqXa+lHxBiDgZaxmNul/+6Atf2las84WbDiTgQ==-----END PKCS7-----">
+            </br>
+            <input type='submit' class = 'btn btn-success btn-block'>
+          </form>
         </div>
 
 
